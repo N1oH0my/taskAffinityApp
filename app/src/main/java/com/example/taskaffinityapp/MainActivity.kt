@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.taskaffinityapp.models.User
+import com.example.taskaffinityapp.models.BundleKeys.USER
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         val bundle = intent.extras
 
-        val user = bundle?.getSerializable("user") as User
+        val user = bundle?.getSerializable(USER) as User
 
         val toastText = "Добро пожаловать, ${user.name} ${user.surname}"
         Toast.makeText(this, toastText, Toast.LENGTH_LONG).show()

@@ -11,7 +11,8 @@ import androidx.core.os.bundleOf
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.taskaffinityapp.R
-
+import com.example.taskaffinityapp.models.BundleKeys.NAME
+import com.example.taskaffinityapp.models.BundleKeys.SURNAME
 class RegisterFlowSurnameActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,8 +31,8 @@ class RegisterFlowSurnameActivity : AppCompatActivity() {
             val surname = editTextName.text.toString()
             if (surname.isNotEmpty()){
                 val bundle = bundleOf(
-                    "name" to name,
-                    "surname" to surname
+                    NAME to name,
+                    SURNAME to surname
                 )
 
                 val intent  = Intent(this, RegisterFlowAgeActivity::class.java)

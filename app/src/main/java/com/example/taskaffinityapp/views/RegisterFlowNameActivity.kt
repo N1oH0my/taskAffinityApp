@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.taskaffinityapp.R
-
+import com.example.taskaffinityapp.models.BundleKeys.NAME
 
 class RegisterFlowNameActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +31,7 @@ class RegisterFlowNameActivity : AppCompatActivity() {
             if (name.isNotEmpty())
             {
                 val intent  = Intent(this, RegisterFlowSurnameActivity::class.java)
-                intent.putExtra("name", name)
+                intent.putExtra(NAME, name)
 
                 startActivity(intent)
             }

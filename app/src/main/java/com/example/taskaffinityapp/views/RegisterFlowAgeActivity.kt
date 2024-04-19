@@ -14,6 +14,8 @@ import com.example.taskaffinityapp.MainActivity
 import com.example.taskaffinityapp.R
 import com.example.taskaffinityapp.models.User
 
+import com.example.taskaffinityapp.models.BundleKeys.USER
+
 class RegisterFlowAgeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,7 +48,7 @@ class RegisterFlowAgeActivity : AppCompatActivity() {
                 nextBundle.putSerializable("user", user)
                 */
                 val nextBundle = bundleOf(
-                    "user" to user
+                    USER to user
                 )
                 intent.putExtras(nextBundle)
 
